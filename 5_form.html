@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML</title>
+</head>
+<body>
+    
+    <h2>Form in HTML</h2>
+
+
+    <h2> Contact Us</h2>
+
+    <form action="submit_form.php" method="post", enctype="multipart/form-data" target="_self" autocomplete="on">
+        <!-- Text Input -->
+         <label for="name">Name: </label>
+         <input type="text" id="name" required>
+         <br><br>
+
+         <!-- Email input -->
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br><br>
+
+        <!-- File upload -->
+         <label for="resume">Upload Resume: </label> <!--for, use to associate with input using name, both should same-->
+         <input type="file" id="resume" name="resume">
+         <br><br>
+
+         <!-- Submit Button -->
+          <button type="submit">Submit</button>
+
+
+          <br><br>
+
+
+          <!-- textarea: The HTML <textarea> tag is used to define a multi-line text input control. -->
+            <label for="testing">Testing textarea in html</label> <br>
+            <textarea name="testing" id="textarea" rows="4" cols="50">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque repellat repellendus quis sunt enim veritatis temporibus! Libero velit officia aperiam nostrum cum error, animi vitae necessitatibus enim ex esse distinctio?
+            </textarea> <br>
+
+
+            <!-- Dropdown list -->
+             <label for="cars">Choose a car: </label>
+             <select name="cars" id="cars">
+                <option value="select">Select</option>
+                <option value="volvo">Volvo</option>
+                <option value="Saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            
+             </select>
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+<!-- 
+
+Form : 
+    The <form> tag in HTML is used to create a form for collecting user input. Forms are essential for web applications because they allow users to submit data, such as login credentials
+
+Basic Structure of a <form> Tag :
+    <form action="submit_form.php" method="post">
+            //Form elements go here
+    </form>
+
+
+type: 
+    - text
+    - password
+    - email
+    - number
+    - date
+    - time 
+    - checkbox
+    - radio
+    - file
+    - hidden 
+    - button 
+    - submit 
+    - reset
+    - color 
+    - range
+    - search
+    - tel
+    - url
+    - month
+    - week
+
+
+Key Attributes of the <form> Tag:
+    1. action: Specifies the URL where the form data will be sent when the form is submitted.
+                <form action="submit_form.php"> //the data will be sent to the submit_form.php script on your server
+
+    2. method: Specifies the HTTP method used when sending form data. The most common methods are GET and POST.
+                <form method="post">
+
+            a. GET: Sends form data as URL parameters. Data appears in the URL (e.g., example.com/form?name=John&age=30). This
+                     is suitable for non-sensitive data or when bookmarking is needed.
+            b. POST: Sends form data in the request body, not visible in the URL. This is more secure and suitable for 
+                     sensitive data, such as passwords.
+
+    3. enctype: Specifies how the form data should be encoded when submitted. This is especially important when uploading files.
+
+           <form enctype="multipart/form-data">
+         
+            Usage:
+                application/x-www-form-urlencoded: Default encoding; suitable for text data.
+                multipart/form-data: Required when uploading files.
+                text/plain: Sends data without encoding; rarely used.
+
+    4. target: Specifies where to display the response after the form is submitted.
+
+                <form target="_blank">
+
+                Usage:
+                    _self: (default) Opens the response in the same browsing context.
+                    _blank: Opens the response in a new tab or window.
+                    _parent: Opens the response in the parent frame.
+                    _top: Opens the response in the full body of the window.
+
+    5. autocomplete:  Enables or disables autocomplete for the form.
+
+                    <form autocomplete="on">
+        Usage:
+            on: (default) Browser will suggest previously entered data.
+            off: Disables autocomplete.
+
+
+    6. novalidate: Disables HTML5 form validation when present.
+
+                        <form novalidate>
+        Useful when custom validation is handled via JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
